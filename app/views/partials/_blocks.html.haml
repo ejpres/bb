@@ -1,0 +1,20 @@
+#blocks
+  #first-block{ :class => 'block' }
+    .block-inside
+      .tab.left
+        .tag= link_to 'Warenkorb', cart_path(@cart.id), :remote => true
+      .tab.inactive.right
+        .tag= link_to 'Benutzer', login_path, :remote => true
+          
+      .block-content= render @cart
+
+  - (1..2).each do |i|
+    .block
+      .block-inside
+        .tab.left
+          .tag News
+        .tab.inactive.right
+          .tag  
+        
+           
+   

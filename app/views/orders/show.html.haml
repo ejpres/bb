@@ -1,0 +1,30 @@
+%h1= @order.name + 's Bestellung'
+%table
+  %tr
+    %th Adresse
+    %th E-Mail
+    %th Bezahlung
+    %th Status
+  %tr
+    %td
+      %ul
+        %li= @order.name 
+        %li= @order.street
+        %li= @order.zip.to_s + ' ' + @order.city
+        %li= @order.country
+    %td= @order.email
+    %td= @order.pay_type
+    %td= @status
+%h2 Bestellte Artikel
+%table
+  %tr
+    %th.quantity Anzahl
+    %th.product Artikel
+    %th.price Einzelpreis
+    %th.total_price Preis
+    %th.delete
+  = render @order.line_items
+
+= link_to 'Edit', edit_order_path(@order)
+|
+= link_to 'Back', orders_path

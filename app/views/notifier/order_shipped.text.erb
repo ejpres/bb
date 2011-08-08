@@ -1,0 +1,13 @@
+Sehr geehrter <%= @order.name %>,
+
+Ihre Bestellung bei BERNER-Bikes.com wurde soeben versand.
+
+Die Lieferung beinhaltet die folgenden Produkte:
+
+<%= render @order.line_items %>
+
+Wir wünschen ihnen viel Spaß und Erfolg damit!
+
+Mit freundlichen Grüßen,
+
+Ihr BERNER-Bikes.com Team

@@ -1,0 +1,23 @@
+%h1 Warenkorb
+-if cart.line_items.any?
+  %table
+    %tr
+      %th.quantity 
+      %th.product Artikel
+      %th.price Einzelpreis
+      %th.total_price Preis
+      %th.delete
+    = render(@cart.line_items)  
+    %tr.total
+      %td.quantity 
+      %td.total Total
+      %td.price
+      %td.total_price= number_to_currency(cart.total_price, :format => "%n %u", :unit => "€", :seperator => ",")
+      %td.delete
+  = button_to 'Bestellen', new_order_path, :method => :get
+  = button_to 'Warenkorb leeren', @cart, :method => :delete, :confirm => 'Sind Sie sicher? Ganz echt?' 
+
+  .show_cart= link_to 'Warenkorb anzeigen', {:controller => 'carts', :action => 'show', :id => @cart.id }
+-else
+  .empty_cart
+    %p Es befinden sich keine Artikel in ihrem Warenkorb.

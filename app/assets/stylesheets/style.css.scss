@@ -1,0 +1,203 @@
+body {
+  	font-family: 'Didact Gothic', Helvetica, Arial, sans-serif;
+	font-size: 12px;
+}
+a, a:hover {
+	text-decoration: none;
+	background: none;
+
+}
+p {
+  	font-family: 'Didact Gothic', Helvetica, Arial, sans-serif;
+}
+
+.tab { 
+	color: #ddd;
+	font-size: 14px;
+}
+
+.tab.inactive {
+	color: #222;
+	background: $darkred;
+	-moz-box-shadow:INSET -2px -2px 15px #800;
+	-webkit-box-shadow:INSET -2px -2px 15px #800;
+	box-shadow: INSET -2px -2px 15px #800;
+}
+.tab.inactive:hover {
+	color: #ddd;
+	background: $red;
+	}
+.block {
+	color: #eee;
+	font-size: 12px;
+	h1 {
+		display: block;
+		font-size: 14px;
+	  	font-family: 'Didact Gothic', Helvetica, Arial, sans-serif;
+		width: 160px;
+		font-weight: normal;
+		text-align: center;
+		margin-bottom: 10px;
+	}
+	h2 {
+		font-family: Helvetica, Arial, sans-serif;
+		font-size: 32px;
+		color: $darkred;
+	}
+}
+.price {
+	font-family: Helvetica, Arial, sans-serif;
+
+}
+#quicklinks {
+	font-size: 11px;
+	li {
+		color: #888;
+	}
+}
+.copyright {
+	text-align:left;
+	color: #888;
+	.link {
+		font-weight: bold;
+		color: $red;
+	}
+}
+h1 {
+	font-family: Helvetica, Arial, sans-serif;
+	font-size: 32px;
+	font-weight: normal;
+	line-height: 36px;
+	
+}
+h2 {
+	font-family: 'Didact Gothic', Helvetica, Arial, sans-serif;
+	font-size: 24px;
+	font-weight: normal;
+	line-height: 24px;
+	
+}
+/********* TABLES ***********/
+#content {
+	table {
+		margin: 20px 0 0 0;
+		width: 100%;
+	}
+	th {
+		text-align: left;
+		vertical-align: middle;
+		font-weight: bold;
+		height: 36px;
+		background: url(menu_back.jpg);
+		background-repeat: repeat-x;
+		padding: 0 10px; 
+
+	}
+	td {
+		vertical-align: middle;
+		height: 50px;
+		padding: 4px 0px 3px 10px; 
+		font-size: 11px;
+		line-height: 14px;
+	}
+	tr {
+		background: #fff;
+	}
+	tr:nth-child(2n+3){
+		background: #eee;
+	}
+	tr.total {
+		background: #aaa;
+		font-weight: bold;
+		border-top: solid 1px #000;
+		border-bottom: solid 1px #000;
+	}
+	.show_cart {
+		display: none;
+	}
+		
+}
+#first-block {
+	
+	a {
+		color: #ccc;
+		background: none;
+	}
+	table {
+		margin-bottom: 10px;
+	}
+	th {
+		color: #800;
+		font-weight: bold;		
+		border-bottom: 2px solid #800;
+	}
+	td {
+		line-height: 28px;
+	}
+
+	.quantity {
+		width: 50px;
+		text-align: center;
+	}
+	.product {
+		width: 150px;
+		text-align: left;
+	}
+	.price, .delete {
+		display: none;
+	}
+	.total_price {
+		width: 95px;
+		text-align: right;
+		padding-right: 25px;
+	}
+	th.total_price {
+		padding-right: 38px;
+	}
+
+	tr.total {
+		background: $darkred;
+		border-top: 2px solid #800;
+		border-bottom: 2px solid #800;
+		-moz-box-shadow:INSET -2px -2px 15px #800;
+		-webkit-box-shadow:INSET -2px -2px 15px #800;
+		box-shadow: INSET -2px -2px 15px #800;
+		td {
+			height: 30px;
+			vertical-align: middle;
+		}
+		.total {
+			color: #d00;
+		}
+	}
+	.show_cart{
+		a {
+			color: #400;
+			text-decoration: underline;
+		}
+	}
+	.empty_cart{
+		color: #400;
+		padding: 15px 25px 20px 20px;
+		text-align: center;
+	}
+	.field {
+		margin: 0px 10px 20px 30px;
+	}
+	button {
+		margin-right: 40px;
+	}
+
+	
+} 
+.block-content h1{
+	display: block;
+	position: absolute;
+	left: 10px;
+	bottom: 10px;
+	font-family: Helvetica, Arial, sans-serif;
+	font-size: 32px;
+	line-height: 32px;
+	margin:0;
+	color: $darkred;
+}

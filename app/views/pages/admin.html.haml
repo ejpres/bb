@@ -1,0 +1,26 @@
+#admin
+  %h1 Administration
+  %section#content_admin
+    %h1 Inhalt
+    %ul
+      %li= link_to "Artikel erstellen", new_product_path
+      %li= link_to "Artikel anzeigen", products_path
+      %li= link_to "Slide erstellen", new_slide_path
+      %li= link_to "Slides anzeigen", slides_path
+      %li News erstellen
+      %li News anzeigen
+      %li Partner erstellen
+      %li Partner anzeigen
+  %section#order_admin
+    %h1 Bestellungen
+    %ul
+      %li neue Bestellungen anzeigen
+      %li Bestellungen in Bearbeitung anzeigen
+      %li= link_to "Alle Bestellungen anzeigen", orders_path
+      %li Bestellungsabwicklung
+
+  %section#user_admin
+    %h1 Benutzer
+    %ul
+      %li Benutzer anzeigen
+      %li Benutzer erstellen

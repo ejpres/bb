@@ -1,0 +1,11 @@
+$('#first-block .block-content').html("<%= escape_javascript render(@cart) %>");
+$('.product_image').clone()
+	.css('position', 'absolute')
+	.css('z-index', '100')
+	.css('box-shadow', '20px -20px 190px #ffe')
+	.appendTo('#content')
+	.animate({ 	bottom: "-118px", 
+				width: "0px",
+				height: "0px",
+				opacity: "0.7",
+				left: "60px"}, 600, function(){ $(this).remove()} );

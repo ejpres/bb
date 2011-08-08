@@ -1,0 +1,28 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/Fixtures.html
+
+one:
+  name: Eric Nordmeyer
+  street: Sonnenstr. 214
+  zip: 44137
+  city: Dortmund
+  country: Deutschland
+  email: eric@nordmeyer.de
+  pay_type: Nachnahme
+
+two:
+  name: John Doe
+  street: Hohe Str.
+  zip: 44135
+  city: Dortmund
+  country: Deutschland
+  email: frank@doe.de
+  pay_type: Vorkasse
+
+invalid:
+  name:
+  street:
+  zip: 55555555
+  city:
+  country:
+  email:
+  pay_type:

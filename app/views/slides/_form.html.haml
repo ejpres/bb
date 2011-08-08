@@ -1,0 +1,37 @@
+= form_for(@slide) do |f|
+  - if @slide.errors.any?
+    #error_explanation
+      %h2
+        = pluralize(@slide.errors.count, "error")
+        prohibited this slide from being saved:
+      %ul
+        - @slide.errors.full_messages.each do |msg|
+          %li= msg
+      
+
+  .field
+    = f.label 'Titel'
+    %br
+    = f.text_field :title
+
+  .field
+    = f.label 'Untertitel' 
+    %br
+    = f.text_field :subtitle
+  .field
+    = f.label 'Reihenfolge' 
+    %br
+    = f.text_field :order
+  .field
+    = f.label 'Bild' 
+    %br
+    - if @slide.image?
+      aktuelles Bild:
+      %br
+      = image_tag @slide.image_url(:tiny).to_s 
+      %br
+    = f.file_field :image 
+  .actions
+    = f.submit
+
+

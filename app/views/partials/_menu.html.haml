@@ -1,0 +1,11 @@
+%nav
+  %ul.menu
+    %li.logo.home= link_to image_tag('berner_logo.png'), root_url
+    %li= link_to 'Rahmen', rahmen_url
+    %li= link_to 'Schaltwerke', schaltwerke_url
+    %li= link_to 'Tuning', tuning_url
+    %li= link_to 'Konfigurator', konfigurator_url
+    %li= link_to 'Shop', shop_url
+    %li= link_to 'Händler', haendler_url
+    - if (session[:user_id]) 
+      %li= link_to 'abmelden', logout_url

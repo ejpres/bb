@@ -1,0 +1,49 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/Fixtures.html
+
+one:
+  name: MyString
+  description: MyString
+  sku: MyString
+  price: 1
+  image: MyString
+  category_id: 1
+
+two:
+  name: MyString
+  description: MyString
+  sku: Artikelnummer
+  price: 1
+  image: MyString
+  category_id: 1
+
+ruby:
+  name: MyString
+  description: MyString
+  sku: MyString
+  price: 1
+  image: MyString
+  category_id: 1
+
+invalid:
+  name: 
+  description: 
+  sku: 
+  price: a
+  image: 
+  category_id: 
+
+zero_price:
+  name: MyString
+  description: MyString
+  sku: Artikelnummer
+  price: 0
+  image: MyString
+  category_id: 1  
+
+letter_price:
+  name: MyString
+  description: MyString
+  sku: Artikelnummer
+  price: a
+  image: MyString
+  category_id: 1    

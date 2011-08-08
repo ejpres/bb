@@ -1,0 +1,28 @@
+%h1 Artikel
+
+%table
+  %tr
+    %th Name
+    %th Kategorie
+    %th Preis
+    %th Bestellnummer
+    %th Bild
+    %th
+    %th
+    %th
+
+  - @products.each do |product|
+    %tr
+      %td= product.name
+      - if product.category != nil
+        %td= product.category.name
+      - else 
+        %td
+      %td= product.price
+      %td= product.sku
+      %td= image_tag product.image_url(:tiny).to_s
+      %td= link_to 'zeigen', product
+      %td= link_to 'bearbeiten', edit_product_path(product)
+      %td= link_to 'löschen', product, confirm: 'Are you sure?', method: :delete
+%br
+= link_to 'Neuer Artikel', new_product_path

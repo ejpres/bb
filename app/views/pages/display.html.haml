@@ -1,0 +1,14 @@
+#display
+  .item
+    .initial
+      %h1= @category
+      %h2 road | cross | mtb
+  - @products.each do |product|
+    %article.item
+      .item_image
+        = image_tag product.image_url(:display).to_s
+      .item_name
+        %h1= product.name
+      
+
+       

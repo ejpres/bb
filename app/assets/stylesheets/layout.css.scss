@@ -1,0 +1,130 @@
+#container {
+	width: 960px;
+	margin: 0 auto;
+}
+#content {
+	position: relative;
+	clear: both;
+	display: block;
+	margin-bottom: 30px;
+	width: 960px;
+	min-height: 540px;
+	-moz-box-shadow: 5px 5px 9px #aaa;
+	-webkit-box-shadow: 5px 5px 9px #aaa;
+	box-shadow: 5px 5px 9px #aaa;
+	
+
+}
+
+.tab {
+	display: block;
+	height: 36px;
+	width: 160px;
+	float: left;
+	background-repeat: repeat-x;
+	text-align: center;
+	overflow: hidden;
+	line-height: 36px;
+}
+.left {
+	border-bottom-right-radius: 10px;
+}
+.right {
+	border-bottom-left-radius: 10px;
+}
+	
+
+.image {
+	float: left;
+}
+
+#blocks {
+	clear:both;
+	margin-bottom: 20px;
+	height: 320px;
+}
+.block {
+    display: block;
+	float: left;
+	width: 320px;
+	height: 320px;
+	box-shadow: 5px 5px 9px #aaa;
+	input {
+		float: right;
+		margin-right: 20px;
+	}
+
+}
+.block-inside {
+	display: block;
+	position: relative;
+	width: 320px;
+	height: 320px;
+	background: $red;
+	box-shadow: INSET -6px -3px 6px $darkred;
+}
+.show_cart{
+		position: absolute;
+		bottom: 10px;
+		right: 20px;
+		}  
+.block-content{
+	padding-top: 50px;
+}
+.blockwrap {
+	float: left;
+}
+
+.partner {
+	display: block;
+	float: left;
+	width: 230px;
+	height: 140px;
+	margin: 5px 5px;
+	background: #ddd;
+}
+#quicklinks {
+	clear:both;
+	padding-top:20px;
+	margin: 0px 0px 20px 5px;
+	-webkit-column-gap: 3%;
+	-webkit-column-count: 4;
+}
+footer {
+	display:block;
+	clear:both;
+	width: 960px;
+	height: 36px;
+	margin-bottom: 20px;
+	text-align: center;
+	line-height: 36px;
+	background: $red;
+	color: #DDD;
+	-moz-box-shadow: 5px 5px 9px #aaa;
+	-webkit-box-shadow: 5px 5px 9px #aaa;
+	box-shadow: 5px 5px 9px #aaa;	
+}
+.footer-inside {
+	box-shadow: INSET -6px -3px 6px $darkred;
+}
+#notice {
+	position: absolute;
+	display: block;
+	top: 596px;
+	height: 36px;
+    overflow: hidden;
+    font-size: 20px;
+	font-family: Helvetica, Arial, sansserif;
+	font-weight: normal;
+	line-height: 36px;
+	color: #000;
+    z-index: 100;
+    background: url('menu_back.jpg');
+    cursor: pointer;
+    -moz-box-shadow: 5px 5px 9px #aaa;
+	-webkit-box-shadow: 5px 5px 9px #aaa;
+	box-shadow: 5px 5px 9px #aaa;
+	border-top-left-radius: 10px;
+	padding: 0 20px;
+	margin:0 0 0 20px;
+}

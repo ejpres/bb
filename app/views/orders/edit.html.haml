@@ -1,0 +1,20 @@
+%h1 Editing order
+
+= render 'form'
+
+%table
+  %tr
+    %th.quantity 
+    %th.product Artikel
+    %th.price Einzelpreis
+    %th.delete
+  = render(@order.line_items)  
+  %tr.total
+    %td.quantity 
+    %td.total Total
+    %td.price
+    %td.delete
+
+= link_to 'Show', @order 
+|
+= link_to 'Back', orders_path

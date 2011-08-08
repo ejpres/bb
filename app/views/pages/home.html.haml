@@ -1,0 +1,10 @@
+#rotator_wrapper
+  %ul#rotator
+    - @slides.each do |slide|
+      %li.slide{ :id => slide.title }
+        .slide_image
+          = image_tag slide.image_url(:slide).to_s
+        .slide-tag
+          %hgroup
+            %h2= slide.subtitle
+            %h1= slide.title

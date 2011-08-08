@@ -1,0 +1,23 @@
+!!!5
+%html
+%head
+  %title Berner-Bikes.com
+  = stylesheet_link_tag "http://fonts.googleapis.com/css?family=Didact+Gothic|Metrophobic|Special+Elite"
+  = stylesheet_link_tag "application"
+  = javascript_include_tag "application"
+  = csrf_meta_tags
+
+%body
+  #container
+    = render 'partials/menu'
+    #notice= notice
+
+    #content
+      = yield
+    = render 'partials/blocks'
+    #partners
+      = render 'partials/partners'
+    #quicklinks
+      = render 'partials/links'
+    = render 'partials/footer'
+

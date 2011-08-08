@@ -1,0 +1,27 @@
+%h3 BERNER-Bikes.com Bestellbestätigung
+
+%p= 'Sehr geehrter' + @order.name + ','
+
+%p vielen Dank für Ihre Bestellung bei BERNER-Bikes.com
+
+%p Sie haben die folgenden Produkte bestellt:
+
+%table
+  %tr
+    %th Anzahl
+    %th Produkt
+    %th Einzelpreis
+    %th Preis
+  - @order.line_items.each do |line_item|
+    %tr.line_item{ :id => (line_item == @current_item) && 'current_item'}
+      %td.quantity= line_item.quantity
+      %td.product= link_to line_item.product.name + ' ' + line_item.product.sku, {:controller => 'products', :action => 'show', :id => line_item.product.id }
+      %td.price= number_to_currency(line_item.product.price, :format => "%n %u", :unit => "€", :seperator => ",")
+      %td.total_price= number_to_currency(line_item.total_price, :format => "%n %u", :unit => "€", :seperator => ",")
+
+  
+%p Wir werden ihnen eine weitere Mitteilung senden, sobald ihre Bestellung verschickt ist.
+
+%p Mit freundlichen Grüßen,
+
+%p Ihr BERNER-Bikes.com Team

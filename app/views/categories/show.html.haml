@@ -1,0 +1,12 @@
+#display
+  .item
+    .initial
+      %h1= @category.name
+      %h2 road | cross | mtb  
+  - @category.products.each do |product|
+    %article.item
+      .item_image
+        = link_to (image_tag product.image_url(:display).to_s), {:controller => 'products', :action => 'show', :id => product.id }  
+      .item_name
+        %h1= link_to product.name, {:controller => 'products', :action => 'show', :id => product.id }
+        %h2= link_to product.sku, {:controller => 'products', :action => 'show', :id => product.id }

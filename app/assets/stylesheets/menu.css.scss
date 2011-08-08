@@ -1,0 +1,40 @@
+nav {
+	display:block;
+	width: 960px;
+	height: 36px;
+	margin-top:20px;
+	margin-bottom: 30px;
+	background: url(menu_back.jpg);
+	background-repeat: repeat-x;
+	-moz-box-shadow: 5px 5px 9px #aaa;
+	-webkit-box-shadow: 5px 5px 9px #aaa;
+	box-shadow: 5px 5px 9px #aaa;
+	border-top-left-radius: 10px;
+	border-bottom-left-radius: 10px;
+
+	ul {
+		list-style: none;
+	}
+
+	li {
+		display: block;
+		width: 119px;
+		height: 36px;
+		float: left;
+		font-size: 20px;
+		font-family: Helvetica, Arial, sans-serif;
+		color: #444;
+		text-align:center;
+		line-height: 36px;
+		border-right: 1px solid #DDD;
+		background: url(menu_back.jpg);
+		a:link, a:visited, a:active {
+			color: #444;
+			text-decoration: none; 
+		}
+		a:hover {
+			color: #c00;
+			background: none;
+		}
+	}
+}

@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Title:</b>
+  <%= @slide.title %>
+</p>
+
+<p>
+  <b>Subtitle:</b>
+  <%= @slide.subtitle %>
+</p>
+
+<p>
+  <b>Order:</b>
+  <%= @slide.order %>
+</p>
+
+<p>
+  <b>Image:</b>
+  <%= @slide.image %>
+</p>
+
+
+<%= link_to 'Edit', edit_slide_path(@slide) %> |
+<%= link_to 'Back', slides_path %>

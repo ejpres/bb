@@ -1,0 +1,35 @@
+= form_for(@order) do |f|
+  - if @order.errors.any?
+    .error_explanation
+      %h2
+        = pluralize(@order.errors.count, "error")
+        prohibited this order from being saved:
+      %ul
+        - @order.errors.full_messages.each do |msg|
+          %li= msg
+       
+
+  .field
+    .label= f.label 'Name'
+    = f.text_field :name, :size => "40"
+  .field
+    .label= f.label 'Strasse'
+    = f.text_field :street, :size => "40"
+  .field
+    .label= f.label 'Postleitzahl'
+    = f.text_field :zip 
+  .field
+    .label= f.label 'Stadt'
+    = f.text_field :city, :size => "40"
+  .field
+    .label= f.label 'Land'
+    = f.select :country, Order::COUNTRIES
+  .field
+    .label= f.label 'EMail'
+    = f.text_field :email, :size => "40"
+  .field
+    .label= f.label 'Bezahlung'
+    = f.select :pay_type, Order::PAYMENT_TYPES, :prompt => "Bitte Bezahlungsart wählen"
+  
+  .actions
+    = f.submit "Bestellung abschicken"

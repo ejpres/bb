@@ -1,0 +1,25 @@
+%h1 Slides
+
+%table
+  %tr
+    %th Titel
+    %th Untertitel
+    %th Reihenfolge
+    %th Bild
+    %th 
+    %th
+    %th
+
+
+  - @slides.each do |slide|
+    %tr
+      %td= slide.title
+      %td= slide.subtitle
+      %td= slide.order
+      %td= image_tag slide.image_url(:tiny).to_s
+      %td= link_to 'zeigen', slide
+      %td= link_to 'bearbeiten', edit_slide_path(slide)
+      %td= link_to 'löschen', slide, confirm: 'Are you sure?', method: :delete
+%br
+
+= link_to 'Neue Slide', new_slide_path

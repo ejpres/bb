@@ -1,0 +1,34 @@
+%h1 Benutzer
+
+%table
+  %tr
+    %th Name
+    %th Strasse
+    %th PLZ
+    %th Stadt
+    %th Land
+    %th Email
+    %th Bezahlung
+    %th Status
+    %th
+    %th
+    %th
+  
+
+  - @users.each do |user|
+    %tr
+      %td
+      %td
+      %td
+      %td
+      %td 
+      %td= user.email
+      %td
+      %td
+      %td= link_to 'Show', user
+      %td= link_to 'Edit', edit_user_path(user)
+      %td= link_to 'Destroy', user, confirm: 'Are you sure?', method: :delete
+
+%br
+
+%p.pagination= will_paginate @users

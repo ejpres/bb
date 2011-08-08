@@ -1,0 +1,15 @@
+.product_image
+  = image_tag @product.image_url(:slide).to_s
+.product_tag
+  
+.product_description  
+  %hgroup
+    %h1= @product.name
+    %h2= @product.sku
+  .description
+    %p= @product.description 
+    .price= number_to_currency(@product.price, :format => "%n %u", :unit => "€", :seperator => ",")
+    .tax inkl. gesetzlicher MwSt.
+    %br
+    = button_to 'in den Warenkorb', line_items_path(:product_id => @product), :remote => true 
+      
