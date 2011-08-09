@@ -29,8 +29,6 @@ Bb::Application.configure do
 
   }
 
-  Paperclip.options[:command_path] = "/usr/local/bin/"
-
   # Print deprecation notices to the Rails logger
   config.active_support.deprecation = :log
 

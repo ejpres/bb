@@ -17,7 +17,10 @@ gem 'autotest'
 gem 'autotest-growl'
 gem 'autotest-fsevent'
 
-gem 'paperclip', '~>2.3'
+gem 'rmagick'
+gem 'carrierwave'
+gem 'arel', '2.1.4'
+
 
 gem 'jquery-rails'
 

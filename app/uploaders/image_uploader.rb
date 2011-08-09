@@ -3,9 +3,9 @@
 class ImageUploader < CarrierWave::Uploader::Base
 
   # Include RMagick or ImageScience support:
-  # include CarrierWave::RMagick
+  include CarrierWave::RMagick
   # include CarrierWave::ImageScience
-  include CarrierWave::MiniMagick
+  # include CarrierWave::MiniMagick
 
 
   # Choose what kind of storage to use for this uploader:
@@ -32,7 +32,7 @@ class ImageUploader < CarrierWave::Uploader::Base
 
   # Create different versions of your uploaded files:
   version :thumb do
-    process :scale => [50, 50]
+    process :resize_to_fill => [50, 50]
   end
   version :slide do
     process :resize_to_fill => [960, 540]
